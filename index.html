@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Database Monitor</title>
+    
 </head>
 
 <body>
@@ -20,7 +21,7 @@
     </aside>
 
     <main>
-        <header>
+        <header class="header">
             <h1>Veritabanı İzleme Paneli</h1>
         </header>
         <div class="toolbar">
@@ -30,15 +31,71 @@
             <header>
                 <h2>Veritabanı Listesi</h2>
             </header>
+
             <article>
-                <h3>ERP-Product-01</h3>
-                <p>Bu sayfa, veritabanınızın performansını ve durumunu izlemenize yardımcı olur.</p>
+                <h3><a href="erp-prod-01.html">ERP-PROD-01</a></h3>
+                <dl>
+                    <dt>Durum</dt>
+                    <dd>Sağlıklı</dd>
+                </dl>
+                <dl>
+                    <dt>CPU</dt>
+                    <dd>%34</dd>
+                    <dt>Bağlantı</dt>
+                    <dd>128</dd>
+                    <dt>Ortalama Sorgu Süreci</dt>
+                    <dd>42ms</dd>
+                </dl>
+                <dl>
+                    <dt>Son Kontrol</dt>
+                    <dd><time datetime="2026-10-14T13:37">1dk önce</time></dd>
+                </dl>
             </article>
+
             <article>
-                <h3>CRM-DataBase</h3>
-                <p>Bu sayfa, veritabanınızın performansını ve durumunu izlemenize yardımcı olur.</p>
+                <h3><a href="crm-db.html">CRM-DB</a></h3>
+                <dl>
+                    <dt>Durum</dt>
+                    <dd>Uyarı</dd>
+                </dl>
+                <dl>
+                    <dt>CPU</dt>
+                    <dd>%78</dd>
+                    <dt>Bağlantı</dt>
+                    <dd>312</dd>
+                    <dt>Ortalama Sorgu Süreci</dt>
+                    <dd>180ms</dd>
+                </dl>
+                <dl>
+                    <dt>Son Kontrol</dt>
+                    <dd><time datetime="2026-10-14T13:36">2dk önce</time></dd>
+                </dl>
             </article>
+
+            <article>
+                <h3><a href="log-archive.html">LOG-ARCHIVE</a></h3>
+                <dl>
+                    <dt>Durum</dt>
+                    <dd>Kritik</dd>
+                </dl>
+                <dl>
+                    <dt>CPU</dt>
+                    <dd>%96</dd>
+                    <dt>Bağlantı</dt>
+                    <dd>540</dd>
+                    <dt>Ortalama Sorgu Süreci</dt>
+                    <dd>1.250ms</dd>
+                </dl>
+                <dl>
+                    <dt>Son Kontrol</dt>
+                    <dd><time datetime="2026-10-14T13:37:30">30sn önce</time></dd>
+                </dl>
+            </article>
+
         </section>
+
+        
+        
     </main>
 
 
