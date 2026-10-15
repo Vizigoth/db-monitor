@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#272727;
+}
+
+/* DB Card Css*/
+
+.card {
+    padding: 16px;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card dl {
+    margin-bottom: 0;
+}
+
+.card dd {
+    margin-left: 0;
+}
+
+/* Durum Badge Css*/
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge--healthy {
+    background: #e6f4ea;
+    color: #1e7a3c;
+    border-color: #0d5224;
+}
+
+.badge--warning {
+    background: #fdf3d8;
+    color: #8a5a00;
+    border-color: #4e3300;
+}
+
+.badge--critical {
+    background: #fde8e8;
+    color: #b42318;
+    border-color: #ff9f9f;
+    
+}
+
