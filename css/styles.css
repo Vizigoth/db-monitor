@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+:focus-visible {
+    outline: 1px solid #0d4e97;
+    outline-offset: 0;
+    box-shadow: 0 0 0 4px rgba(13, 78, 151, 0.20);
+
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #272727;
@@ -9,9 +16,32 @@ body {
     /* 14px */
     line-height: 1.43;
     font-weight: 400;
+    margin: 0;
 }
 
-/* TypeScale Css*/
+/* Skip Link */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 8px;
+    background-color: #0e62bb;
+    color: #ffffff;
+    padding: 8px 12px 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.skip-link:hover {
+    background-color: #0d4e97;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+
+/* TypeScale Css */
 
 h1 {
     font-size: 1.5rem;
@@ -35,7 +65,113 @@ h3 {
 }
 
 
-/* DB Card Css*/
+/* Sidebar Css */
+
+.sidebar {
+    background-color: #fafafa;
+    border-right: 1px solid #e6e6e6;
+    padding: 16px;
+}
+
+.sidebar p {
+    font-weight: 500;
+    margin: 0 0 16px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #535353;
+    text-decoration: none;
+    transition: background-color 150ms ease, color 150ms ease;
+}
+
+.sidebar a:hover {
+    background-color: #f5f5f5;
+    color: #272727;
+}
+
+.sidebar a[aria-current] {
+    background-color: #e2edfc;
+    color: #0e62bb;
+    font-weight: 500;
+}
+
+
+/* Toolbar Css */
+
+.toolbar {
+    margin-bottom: 16px;
+}
+
+.toolbar label {
+    font-size: 0.75rem;
+    /* 12px */
+    color: #535353;
+}
+
+.toolbar input,
+.toolbar select {
+    font: inherit;
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.toolbar input:focus-visible,
+.toolbar select:focus-visible {
+    border-color: #0d4e97;
+}
+
+.toolbar button {
+    cursor: pointer;
+    font: inherit;
+    font-weight: 500;
+    height: 32px;
+    padding: 0 10px;
+    background: #ffffff;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    color: #272727;
+    transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.toolbar button:hover {
+    background: #fafafa;
+    border-color: #969696;
+}
+
+
+/* Main Content Css */
+
+main {
+    padding: 24px;
+}
+
+
+/* Page Header */
+
+.page-header {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 16px;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+
+/* DB Card Css */
 
 .card {
     padding: 16px;
@@ -67,9 +203,17 @@ h3 {
 .card h3 a {
     color: inherit;
     text-decoration: none;
+    transition: color 150ms ease;
 }
 
-/* Durum Badge Css*/
+.card h3 a:hover {
+    color: #0e62bb;
+    text-decoration: underline;
+}
+
+
+/* Durum Badge Css */
+
 .badge {
     display: inline-block;
     padding: 2px 8px;
@@ -97,5 +241,45 @@ h3 {
     background: #fde8e8;
     color: #b42318;
     border-color: #ff9f9f;
+}
 
+
+/* Table Css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+
+th,
+td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+}
+
+thead th {
+    background-color: #fafafa;
+    color: #535353;
+    font-size: 0.75rem;
+    /* 12px */
+    font-weight: 400;
+}
+
+tbody th {
+    font-weight: 400;
+}
+
+.num {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
 }

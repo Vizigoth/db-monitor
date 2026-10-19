@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERP-PROD-01</title>
     <link rel="stylesheet" href="css/styles.css">
-    
-    
+
+
 </head>
 
 <body>
-    <a href="#main-content">İçeriğe geç</a>
-    <aside>
+    <a href="#main-content" class="skip-link">İçeriğe geç</a>
+    <aside class="sidebar">
         <p>Database Monitor</p>
         <nav>
             <ul>
@@ -24,7 +24,7 @@
     </aside>
 
     <main id="main-content">
-        <header>
+        <header class="page-header">
             <h1>ERP-PROD-01</h1>
         </header>
         <div class="toolbar">
@@ -38,47 +38,45 @@
             <thead>
                 <tr>
                     <th scope="col">Veritabanı</th>
-                    <th scope="col">Boyut</th>
-                    <th scope="col">Bağlantı</th>
-                    <th scope="col">En yavaş sorgu</th>
-                    <th scope="col">Durum</th>
+                    <th scope="col" class="num">Boyut</th>
+                    <th scope="col" class="num">Bağlantı</th>
+                    <th scope="col" class="num">En yavaş sorgu</th>
+                    <th scope="col" class="center">Durum</th>
                 </tr>
             </thead>
             <!-- Tbody TableBody içerik textleri -->
             <tbody>
                 <tr>
                     <th scope="row">Muhasebe</th>
-                    <td>12 GB</td>
-                    <td>48</td>
-                    <td>85 ms</td>
-                    <td>Sağlıklı</td>
+                    <td class="num">12 GB</td>
+                    <td class="num">48</td>
+                    <td class="num">85 ms</td>
+                    <td class="center"><span class="badge badge--healthy">Sağlıklı</span></td>
                 </tr>
 
                 <tr>
                     <th scope="row">Stok</th>
-                    <td>8.4 GB</td>
-                    <td>36</td>
-                    <td>240 ms</td>
-                    <td>Uyarı</td>
+                    <td class="num">8.4 GB</td>
+                    <td class="num">36</td>
+                    <td class="num">240 ms</td>
+                    <td class="center"><span class="badge badge--warning">Uyarı</span></td>
                 </tr>
 
                 <tr>
                     <th scope="row">Satış</th>
-                    <td>21 GB</td>
-                    <td>31</td>
-                    <td>64 ms</td>
-                    <td>Sağlıklı</td>
+                    <td class="num">21 GB</td>
+                    <td class="num">31</td>
+                    <td class="num">64 ms</td>
+                    <td class="center"><span class="badge badge--healthy">Sağlıklı</span></td>
                 </tr>
-                
+
                 <tr>
                     <th scope="row">İnsan Kaynakları</th>
-                    <td>3.2 GB</td>
-                    <td>13</td>
-                    <td>52 ms</td>
-                    <td>Sağlıklı</td>
+                    <td class="num">3.2 GB</td>
+                    <td class="num">13</td>
+                    <td class="num">52 ms</td>
+                    <td class="center"><span class="badge badge--healthy">Sağlıklı</span></td>
                 </tr>
-
-
 
             </tbody>
         </table>
