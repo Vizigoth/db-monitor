@@ -24,141 +24,130 @@
     </aside>
 
     <main id="main-content">
-        <header class="page-header">
-            <h1>Veritabanı İzleme Paneli</h1>
-        </header>
+        <div class="page-top">
+            <header class="page-header">
+                <h1>Veritabanı İzleme Paneli</h1>
+            </header>
 
-        <div class="toolbar">
-            <search>
-                <label for="db-search">Veritabanı ara</label>
-                <input type="search" id="db-search" placeholder="Ara">
+            <div class="toolbar">
+                <search>
+                    <div class="field">
+                        <label for="db-search">Veritabanı ara</label>
+                        <input type="search" id="db-search" placeholder="Ara">
+                    </div>
 
-                <label for="status-filter">Tüm Durumlar</label>
-                <select id="status-filter">
-                    <option value="all">Tümü</option>
-                    <option value="healthy">Sağlıklı</option>
-                    <option value="warning">Uyarı</option>
-                    <option value="critical">Kritik</option>
-                </select>
-            </search>
+                    <div class="field">
+                        <label for="status-filter">Tüm Durumlar</label>
+                        <select id="status-filter">
+                            <option value="all">Tümü</option>
+                            <option value="healthy">Sağlıklı</option>
+                            <option value="warning">Uyarı</option>
+                            <option value="critical">Kritik</option>
+                        </select>
+                    </div>
 
-            <button type="button">Yenile</button>
+                </search>
+
+                <button type="button">Yenile</button>
+            </div>
         </div>
 
         <section>
+
+
             <header>
                 <h2>Veritabanı Listesi</h2>
             </header>
 
-            <!-- <article>
-                <div class="card-container">
+            <div class="card-grid">
 
-                    <div class="card">
-                        <div class="card-header">
-                            <span class="card-title">ERP-PROD-01</span>
-                            <dl>
-                                <dt>Durum</dt>
-                                <dd>Sağlıklı</dd>
-                            </dl>
-                        </div>
-                        <div class="card-content">
-                            <dl>
-                                <dt>CPU</dt>
-                                <dd>%34</dd>
-                                <dt>Bağlantı</dt>
-                                <dd>128</dd>
-                                <dt>Ortalama Sorgu Süreci</dt>
-                                <dd>42ms</dd>
-                            </dl>
-                        </div>
+                <article class="card">
+
+                    <div class="card__header">
+                        <h3><a href="erp-prod-01.html">ERP-PROD-01</a></h3>
+                        <span class="badge badge--healthy">Sağlıklı</span>
                     </div>
 
-                    <div class="card">
-                        <div class="card-header">
-                            <span class="card-title">ERP-PROD-01</span>
-                            <dl>
-                                <dt>Durum</dt>
-                                <dd>Sağlıklı</dd>
-                            </dl>
+                    <dl class="metrics">
+                        <div>
+                            <dt>CPU</dt>
+                            <dd>%34</dd>
                         </div>
-                        <div class="card-content">
-                            <dl>
-                                <dt>CPU</dt>
-                                <dd>%34</dd>
-                                <dt>Bağlantı</dt>
-                                <dd>128</dd>
-                                <dt>Ortalama Sorgu Süreci</dt>
-                                <dd>42ms</dd>
-                            </dl>
+                        <div>
+                            <dt>Bağlantı</dt>
+                            <dd>128</dd>
                         </div>
+                        <div>
+                            <dt>Ortalama Sorgu Süreci</dt>
+                            <dd>42ms</dd>
+                        </div>
+                    </dl>
+                    <dl>
+                        <dt>Son Kontrol</dt>
+                        <dd><time datetime="2026-10-14T13:37">1dk önce</time></dd>
+                    </dl>
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card__header">
+                        <h3><a href="crm-db.html">CRM-DB</a></h3>
+                        <span class="badge badge--warning">Uyarı</span>
                     </div>
 
-                </div>
-            </article> -->
+                    <dl class="metrics">
+                        <div>
+                            <dt>CPU</dt>
+                            <dd>%78</dd>
+                        </div>
+                        <div>
+                            <dt>Bağlantı</dt>
+                            <dd>312</dd>
+                        </div>
+                        <div>
+                            <dt>Ortalama Sorgu Süreci</dt>
+                            <dd>180ms</dd>
+                        </div>
+                    </dl>
 
-            <article class="card">
-                <h3><a href="erp-prod-01.html">ERP-PROD-01</a></h3>
-                <dl>
-                    <dt>Durum</dt>
-                    <dd><span class="badge badge--healthy">Sağlıklı</span></dd>
-                </dl>
-                <dl>
-                    <dt>CPU</dt>
-                    <dd>%34</dd>
-                    <dt>Bağlantı</dt>
-                    <dd>128</dd>
-                    <dt>Ortalama Sorgu Süreci</dt>
-                    <dd>42ms</dd>
-                </dl>
-                <dl>
-                    <dt>Son Kontrol</dt>
-                    <dd><time datetime="2026-10-14T13:37">1dk önce</time></dd>
-                </dl>
-            </article>
+                    <dl>
+                        <dt>Son Kontrol</dt>
+                        <dd><time datetime="2026-10-14T13:36">2dk önce</time></dd>
+                    </dl>
 
-            <article class="card">
-                <h3><a href="crm-db.html">CRM-DB</a></h3>
-                <dl>
-                    <dt>Durum</dt>
-                    <dd><span class="badge badge--warning">Uyarı</span></dd>
-                </dl>
-                <dl>
-                    <dt>CPU</dt>
-                    <dd>%78</dd>
-                    <dt>Bağlantı</dt>
-                    <dd>312</dd>
-                    <dt>Ortalama Sorgu Süreci</dt>
-                    <dd>180ms</dd>
-                </dl>
-                <dl>
-                    <dt>Son Kontrol</dt>
-                    <dd><time datetime="2026-10-14T13:36">2dk önce</time></dd>
-                </dl>
-            </article>
+                </article>
 
-            <article class="card">
-                <h3><a href="log-archive.html">LOG-ARCHIVE</a></h3>
-                <dl>
-                    <dt>Durum</dt>
-                    <dd><span class="badge badge--critical">Kritik</span></dd>
-                </dl>
-                <dl>
-                    <dt>CPU</dt>
-                    <dd>%96</dd>
-                    <dt>Bağlantı</dt>
-                    <dd>540</dd>
-                    <dt>Ortalama Sorgu Süreci</dt>
-                    <dd>1.250ms</dd>
-                </dl>
-                <dl>
-                    <dt>Son Kontrol</dt>
-                    <dd><time datetime="2026-10-14T13:37:30">30sn önce</time></dd>
-                </dl>
+                <article class="card">
 
-            </article>
+                    <div class="card__header">
+                        <h3><a href="log-archive.html">LOG-ARCHIVE</a></h3>
+                        <span class="badge badge--critical">Kritik</span>
+                    </div>
 
+                    <dl class="metrics">
+                        <div>
+                            <dt>CPU</dt>
+                            <dd>%96</dd>
+                        </div>
+                        <div>
+                            <dt>Bağlantı</dt>
+                            <dd>540</dd>
+                        </div>
+                        <div>
+                            <dt>Ortalama Sorgu Süreci</dt>
+                            <dd>1.250ms</dd>
+                        </div>
+                    </dl>
+                    <dl>
+                        <dt>Son Kontrol</dt>
+                        <dd><time datetime="2026-10-14T13:37:30">30sn önce</time></dd>
+                    </dl>
 
+                </article>
+                
 
+            </div>
 
         </section>
 

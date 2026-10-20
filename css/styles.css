@@ -17,7 +17,23 @@ body {
     line-height: 1.43;
     font-weight: 400;
     margin: 0;
+    display: flex;
+    min-height: 100vh;
 }
+
+/* Utilities */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+
+
 
 /* Skip Link */
 
@@ -41,6 +57,8 @@ body {
 }
 
 
+
+
 /* TypeScale Css */
 
 h1 {
@@ -55,6 +73,8 @@ h2 {
     /* 18px */
     line-height: 1.333;
     font-weight: 500;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 h3 {
@@ -65,13 +85,21 @@ h3 {
 }
 
 
+
 /* Sidebar Css */
 
 .sidebar {
     background-color: #fafafa;
     border-right: 1px solid #e6e6e6;
     padding: 16px;
+    width: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    align-self: flex-start;
 }
+
 
 .sidebar p {
     font-weight: 500;
@@ -105,10 +133,16 @@ h3 {
 }
 
 
+
+
 /* Toolbar Css */
 
 .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
+
 }
 
 .toolbar label {
@@ -132,6 +166,18 @@ h3 {
     border-color: #0d4e97;
 }
 
+.toolbar search {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .toolbar button {
     cursor: pointer;
     font: inherit;
@@ -151,11 +197,16 @@ h3 {
 }
 
 
+
+
 /* Main Content Css */
 
 main {
     padding: 24px;
+    flex: 1;
 }
+
+
 
 
 /* Page Header */
@@ -170,6 +221,14 @@ main {
     margin: 0;
 }
 
+.page-top {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding-bottom: 16px;
+}
+
+
 
 /* DB Card Css */
 
@@ -177,8 +236,8 @@ main {
     padding: 16px;
     border: 1px solid #d4d4d4;
     border-radius: 8px;
-    margin-bottom: 12px;
 }
+
 
 .card h3 {
     margin-top: 0;
@@ -211,11 +270,35 @@ main {
     text-decoration: underline;
 }
 
+.metrics {
+    display: flex;
+    gap: 24px;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__header h3,
+.card__header dl {
+    margin: 0;
+}
+
+.card-grid {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+}
+
+
 
 /* Durum Badge Css */
 
 .badge {
-    display: inline-block;
+    display: inline-flex;
     padding: 2px 8px;
     border: 1px solid;
     border-radius: 999px;
@@ -223,6 +306,19 @@ main {
     /* 12px */
     line-height: 1.333;
     font-weight: 500;
+    align-items: center;
+}
+
+.badge::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background-color: currentColor;
+    vertical-align: middle;
+
 }
 
 .badge--healthy {
@@ -242,6 +338,8 @@ main {
     color: #b42318;
     border-color: #ff9f9f;
 }
+
+
 
 
 /* Table Css */
