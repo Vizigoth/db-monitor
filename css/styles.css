@@ -414,3 +414,31 @@ tbody th {
 .center {
     text-align: center;
 }
+
+
+/* Stat Css */
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+    margin: 0 0 16px 0;
+}
+
+.stat {
+    padding: 16px;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+}
+
+.stat__label {
+    font-size: 0.75rem;
+    color: #727272;
+}
+
+.stat__value {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.333;
+    margin: 4px 0 0 0;
+}
