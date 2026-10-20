@@ -23,15 +23,6 @@ body {
 
 /* Utilities */
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-}
-
 
 
 
@@ -74,7 +65,6 @@ h2 {
     line-height: 1.333;
     font-weight: 500;
     padding-bottom: 8px;
-    border-bottom: 1px solid #e6e6e6;
 }
 
 h3 {
@@ -98,12 +88,14 @@ h3 {
     top: 0;
     height: 100vh;
     align-self: flex-start;
+    overflow: hidden;
+    transition: width 200ms ease, padding 200ms ease;
 }
 
 
 .sidebar p {
     font-weight: 500;
-    margin: 0 0 16px 0;
+    margin: 0;
 }
 
 .sidebar ul {
@@ -113,7 +105,9 @@ h3 {
 }
 
 .sidebar a {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 8px 12px;
     border-radius: 6px;
     color: #535353;
@@ -132,8 +126,57 @@ h3 {
     font-weight: 500;
 }
 
+.sidebar__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
 
+.sidebar__toggle {
+    display: flex;
+    padding: 4px;
+    border: none;
+    background: none;
+    border-radius: 6px;
+    color: #535353;
+    cursor: pointer;
+}
 
+.sidebar__toggle:hover {
+    background-color: #f5f5f5;
+}
+
+.sidebar svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Sidebar: kapalı durum */
+
+.sidebar.is-collapsed {
+    width: 56px;
+    padding: 16px 8px 16px 8px;
+}
+
+.sidebar.is-collapsed .sidebar__title,
+.sidebar.is-collapsed .sidebar__label {
+    display: none;
+}
+
+.sidebar.is-collapsed .sidebar__top {
+    justify-content: center;
+}
+
+.sidebar.is-collapsed a {
+    justify-content: center;
+    padding: 8px;
+}
+
+.sidebar.is-collapsed .sidebar__toggle svg {
+    transform: rotate(180deg);
+}
 
 /* Toolbar Css */
 
@@ -141,8 +184,6 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
-
 }
 
 .toolbar label {
@@ -202,10 +243,9 @@ h3 {
 /* Main Content Css */
 
 main {
-    padding: 24px;
+    padding: 0 24px 24px 24px;
     flex: 1;
 }
-
 
 
 
@@ -226,6 +266,7 @@ main {
     top: 0;
     background-color: #ffffff;
     padding-bottom: 16px;
+    padding-top: 24px;
 }
 
 
@@ -236,11 +277,6 @@ main {
     padding: 16px;
     border: 1px solid #d4d4d4;
     border-radius: 8px;
-}
-
-
-.card h3 {
-    margin-top: 0;
 }
 
 .card dl {
@@ -281,8 +317,7 @@ main {
     align-items: center;
 }
 
-.card__header h3,
-.card__header dl {
+.card__header h3 {
     margin: 0;
 }
 
@@ -317,8 +352,6 @@ main {
     border-radius: 50%;
     margin-right: 6px;
     background-color: currentColor;
-    vertical-align: middle;
-
 }
 
 .badge--healthy {
