@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERP-PROD-01</title>
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/styles.css">
 
 
@@ -98,14 +99,31 @@
             </div>
             <div class="stat">
                 <dt class="stat__label">Bağlantı</dt>
-                <dd class="stat__value">128</dd>                
+                <dd class="stat__value">128</dd>
             </div>
             <div class="stat">
                 <dt class="stat__label">Ortalama Sorgu</dt>
-                <dd class="stat__value">42ms</dd>                
+                <dd class="stat__value">42ms</dd>
             </div>
-            
+
         </dl>
+
+        <div class="detail-layout">
+            <section class="panel">
+                <h2 class="panel__title">CPU Kullanımı (Son 24 Saat)</h2>
+                <div class="chart-placeholder">Grafik Alanı</div>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel__title">En Yavaş Sorgular</h2>
+                <ol class="query-list">
+                    <li><code>SELECT * FROM faturalar</code><span>1.240 ms</span></li>
+                    <li><code>UPDATE stok SET miktar</code><span>860 ms</span></li>
+                    <li><code>SELECT cari JOIN hesap</code><span>530 ms</span></li>
+                </ol>
+            </section>
+
+        </div>
 
         <table>
 
