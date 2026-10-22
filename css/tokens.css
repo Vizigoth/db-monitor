@@ -72,19 +72,263 @@
    ========================================= */
 
 :root {
-    /* Red */
-    --bt-brand-light: var(--bt-blue-50);
-    --bt-brand-subtle: var(--bt-blue-50);
-    --bt-brand-muted: var(--bt-blue-50);
-    --bt-brand-emphasis: var(--bt-blue-50);
-    --bt-brand-strong: var(--bt-blue-50);
-    --bt-brand-heavy: var(--bt-blue-50);
-    --bt-brand-solid: var(--bt-blue-600);
-    --bt-brand-default: var(--bt-blue-50);
+    /* Base */
+    --bt-base-default: var(--bt-gray-0);
+    --bt-base-light: var(--bt-gray-50);
+    --bt-base-subtle: var(--bt-gray-100);
+    --bt-base-muted: var(--bt-gray-200);
+    --bt-base-emphasis: var(--bt-gray-300);
+    --bt-base-strong: var(--bt-gray-400);
+    --bt-base-heavy: var(--bt-gray-500);
+    --bt-base-solid: var(--bt-gray-600);
+    --bt-base-intense: var(--bt-gray-700);
 
+    /* Primary */
+    --bt-primary-default: var(--bt-blue-700);
+    --bt-primary-light: var(--bt-blue-50);
+    --bt-primary-subtle: var(--bt-blue-100);
+    --bt-primary-muted: var(--bt-blue-200);
+    --bt-primary-emphasis: var(--bt-blue-300);
+    --bt-primary-strong: var(--bt-blue-400);
+    --bt-primary-heavy: var(--bt-blue-500);
+    --bt-primary-solid: var(--bt-blue-600);
+    --bt-primary-intense: var(--bt-blue-800);
+
+    /* Brand */
+    --bt-brand-light: var(--bt-blue-50);
+    --bt-brand-subtle: var(--bt-blue-100);
+    --bt-brand-muted: var(--bt-blue-200);
+    --bt-brand-emphasis: var(--bt-blue-300);
+    --bt-brand-strong: var(--bt-blue-400);
+    --bt-brand-heavy: var(--bt-blue-500);
+    --bt-brand-solid: var(--bt-blue-600);
+    --bt-brand-default: var(--bt-blue-700);
+    --bt-brand-intense: var(--bt-blue-800);
+
+    /* Error */
+    --bt-error-light: var(--bt-red-50);
+    --bt-error-subtle: var(--bt-red-100);
+    --bt-error-muted: var(--bt-red-200);
+    --bt-error-emphasis: var(--bt-red-300);
+    --bt-error-strong: var(--bt-red-400);
+    --bt-error-heavy: var(--bt-red-500);
+    --bt-error-solid: var(--bt-red-600);
+    --bt-error-default: var(--bt-red-700);
+    --bt-error-intense: var(--bt-red-800);
+
+    /* Success */
+    --bt-success-light: var(--bt-green-50);
+    --bt-success-subtle: var(--bt-green-100);
+    --bt-success-muted: var(--bt-green-200);
+    --bt-success-emphasis: var(--bt-green-300);
+    --bt-success-strong: var(--bt-green-400);
+    --bt-success-heavy: var(--bt-green-500);
+    --bt-success-solid: var(--bt-green-600);
+    --bt-success-default: var(--bt-green-700);
+    --bt-success-intense: var(--bt-green-800);
+
+    /* Warning */
+    --bt-warning-light: var(--bt-yellow-50);
+    --bt-warning-subtle: var(--bt-yellow-100);
+    --bt-warning-muted: var(--bt-yellow-200);
+    --bt-warning-emphasis: var(--bt-yellow-300);
+    --bt-warning-strong: var(--bt-yellow-400);
+    --bt-warning-heavy: var(--bt-yellow-500);
+    --bt-warning-solid: var(--bt-yellow-600);
+    --bt-warning-default: var(--bt-yellow-700);
+    --bt-warning-intense: var(--bt-yellow-800);
+
+    /* Information */
+    --bt-information-light: var(--bt-blue-50);
+    --bt-information-subtle: var(--bt-blue-100);
+    --bt-information-muted: var(--bt-blue-200);
+    --bt-information-emphasis: var(--bt-blue-300);
+    --bt-information-strong: var(--bt-blue-400);
+    --bt-information-heavy: var(--bt-blue-500);
+    --bt-information-solid: var(--bt-blue-600);
+    --bt-information-default: var(--bt-blue-700);
+    --bt-information-intense: var(--bt-blue-800);
 
 }
 
+/* =========================================
+   Design Tokens
+   Alias
+   ========================================= */
+
 :root {
-    --bt-text-brand-solid: var(--bt-brand-solid)
+
+    /* ---------- Surface ---------- */
+
+    /* Surface: primary */
+    --bt-surface-primary-default: var(--bt-base-default);
+    --bt-surface-primary-light: var(--bt-base-light);
+    --bt-surface-primary-subtle: var(--bt-base-subtle);
+    --bt-surface-primary-muted: var(--bt-base-muted);
+    --bt-surface-primary-emphasis: var(--bt-base-emphasis);
+    --bt-surface-primary-strong: var(--bt-base-strong);
+    --bt-surface-primary-heavy: var(--bt-base-heavy);
+    --bt-surface-primary-solid: var(--bt-base-solid);
+    --bt-surface-primary-intense: var(--bt-base-intense);
+
+    /* Surface: brand */
+    --bt-surface-brand-default: var(--bt-brand-default);
+    --bt-surface-brand-light: var(--bt-brand-light);
+    --bt-surface-brand-subtle: var(--bt-brand-subtle);
+    --bt-surface-brand-muted: var(--bt-brand-muted);
+    --bt-surface-brand-emphasis: var(--bt-brand-emphasis);
+    --bt-surface-brand-strong: var(--bt-brand-strong);
+    --bt-surface-brand-heavy: var(--bt-brand-heavy);
+    --bt-surface-brand-solid: var(--bt-brand-solid);
+    --bt-surface-brand-intense: var(--bt-brand-intense);
+
+    /* Surface: success */
+    --bt-surface-success-default: var(--bt-success-default);
+    --bt-surface-success-light: var(--bt-success-light);
+    --bt-surface-success-subtle: var(--bt-success-subtle);
+    --bt-surface-success-muted: var(--bt-success-muted);
+    --bt-surface-success-emphasis: var(--bt-success-emphasis);
+    --bt-surface-success-strong: var(--bt-success-strong);
+    --bt-surface-success-heavy: var(--bt-success-heavy);
+    --bt-surface-success-solid: var(--bt-success-solid);
+    --bt-surface-success-intense: var(--bt-success-intense);
+
+    /* Surface: warning */
+    --bt-surface-warning-default: var(--bt-warning-default);
+    --bt-surface-warning-light: var(--bt-warning-light);
+    --bt-surface-warning-subtle: var(--bt-warning-subtle);
+    --bt-surface-warning-muted: var(--bt-warning-muted);
+    --bt-surface-warning-emphasis: var(--bt-warning-emphasis);
+    --bt-surface-warning-strong: var(--bt-warning-strong);
+    --bt-surface-warning-heavy: var(--bt-warning-heavy);
+    --bt-surface-warning-solid: var(--bt-warning-solid);
+    --bt-surface-warning-intense: var(--bt-warning-intense);
+
+    /* Surface: error */
+    --bt-surface-error-default: var(--bt-error-default);
+    --bt-surface-error-light: var(--bt-error-light);
+    --bt-surface-error-subtle: var(--bt-error-subtle);
+    --bt-surface-error-muted: var(--bt-error-muted);
+    --bt-surface-error-emphasis: var(--bt-error-emphasis);
+    --bt-surface-error-strong: var(--bt-error-strong);
+    --bt-surface-error-heavy: var(--bt-error-heavy);
+    --bt-surface-error-solid: var(--bt-error-solid);
+    --bt-surface-error-intense: var(--bt-error-intense);
+
+
+    /* ---------- Border ---------- */
+
+    /* Border: primary */
+    --bt-border-primary-default: var(--bt-base-emphasis);
+    --bt-border-primary-light: var(--bt-base-light);
+    --bt-border-primary-subtle: var(--bt-base-subtle);
+    --bt-border-primary-muted: var(--bt-base-muted);
+    --bt-border-primary-emphasis: var(--bt-base-strong);
+    --bt-border-primary-strong: var(--bt-base-heavy);
+    --bt-border-primary-heavy: var(--bt-base-solid);
+    --bt-border-primary-solid: var(--bt-base-intense);
+    --bt-border-primary-intense: var(--bt-gray-800);
+
+    /* Border: brand */
+    --bt-border-brand-default: var(--bt-brand-default);
+    --bt-border-brand-light: var(--bt-brand-light);
+    --bt-border-brand-subtle: var(--bt-brand-subtle);
+    --bt-border-brand-muted: var(--bt-brand-muted);
+    --bt-border-brand-emphasis: var(--bt-brand-emphasis);
+    --bt-border-brand-strong: var(--bt-brand-strong);
+    --bt-border-brand-heavy: var(--bt-brand-heavy);
+    --bt-border-brand-solid: var(--bt-brand-solid);
+    --bt-border-brand-intense: var(--bt-brand-intense);
+
+    /* Border: success */
+    --bt-border-success-default: var(--bt-success-default);
+    --bt-border-success-light: var(--bt-success-light);
+    --bt-border-success-subtle: var(--bt-success-subtle);
+    --bt-border-success-muted: var(--bt-success-muted);
+    --bt-border-success-emphasis: var(--bt-success-emphasis);
+    --bt-border-success-strong: var(--bt-success-strong);
+    --bt-border-success-heavy: var(--bt-success-heavy);
+    --bt-border-success-solid: var(--bt-success-solid);
+    --bt-border-success-intense: var(--bt-success-intense);
+
+    /* Border: warning */
+    --bt-border-warning-default: var(--bt-warning-default);
+    --bt-border-warning-light: var(--bt-warning-light);
+    --bt-border-warning-subtle: var(--bt-warning-subtle);
+    --bt-border-warning-muted: var(--bt-warning-muted);
+    --bt-border-warning-emphasis: var(--bt-warning-emphasis);
+    --bt-border-warning-strong: var(--bt-warning-strong);
+    --bt-border-warning-heavy: var(--bt-warning-heavy);
+    --bt-border-warning-solid: var(--bt-warning-solid);
+    --bt-border-warning-intense: var(--bt-warning-intense);
+
+    /* Border: error */
+    --bt-border-error-default: var(--bt-error-default);
+    --bt-border-error-light: var(--bt-error-light);
+    --bt-border-error-subtle: var(--bt-error-subtle);
+    --bt-border-error-muted: var(--bt-error-muted);
+    --bt-border-error-emphasis: var(--bt-error-emphasis);
+    --bt-border-error-strong: var(--bt-error-strong);
+    --bt-border-error-heavy: var(--bt-error-heavy);
+    --bt-border-error-solid: var(--bt-error-solid);
+    --bt-border-error-intense: var(--bt-error-intense);
+
+
+    /* ---------- Text ---------- */
+
+    /* Text: primary */
+    --bt-text-primary-default: var(--bt-gray-900);
+    --bt-text-primary-light: var(--bt-base-muted);
+    --bt-text-primary-subtle: var(--bt-base-emphasis);
+    --bt-text-primary-muted: var(--bt-base-strong);
+    --bt-text-primary-emphasis: var(--bt-base-heavy);
+    --bt-text-primary-strong: var(--bt-base-solid);
+    --bt-text-primary-heavy: var(--bt-base-intense);
+    --bt-text-primary-solid: var(--bt-gray-800);
+    --bt-text-primary-inverted: var(--bt-base-default);
+
+    /* Text: brand */
+    --bt-text-brand-default: var(--bt-brand-default);
+    --bt-text-brand-light: var(--bt-brand-light);
+    --bt-text-brand-subtle: var(--bt-brand-subtle);
+    --bt-text-brand-muted: var(--bt-brand-muted);
+    --bt-text-brand-emphasis: var(--bt-brand-emphasis);
+    --bt-text-brand-strong: var(--bt-brand-strong);
+    --bt-text-brand-heavy: var(--bt-brand-heavy);
+    --bt-text-brand-solid: var(--bt-brand-solid);
+    --bt-text-brand-intense: var(--bt-brand-intense);
+
+    /* Text: success */
+    --bt-text-success-default: var(--bt-success-default);
+    --bt-text-success-light: var(--bt-success-light);
+    --bt-text-success-subtle: var(--bt-success-subtle);
+    --bt-text-success-muted: var(--bt-success-muted);
+    --bt-text-success-emphasis: var(--bt-success-emphasis);
+    --bt-text-success-strong: var(--bt-success-strong);
+    --bt-text-success-heavy: var(--bt-success-heavy);
+    --bt-text-success-solid: var(--bt-success-solid);
+    --bt-text-success-intense: var(--bt-success-intense);
+
+    /* Text: warning */
+    --bt-text-warning-default: var(--bt-warning-default);
+    --bt-text-warning-light: var(--bt-warning-light);
+    --bt-text-warning-subtle: var(--bt-warning-subtle);
+    --bt-text-warning-muted: var(--bt-warning-muted);
+    --bt-text-warning-emphasis: var(--bt-warning-emphasis);
+    --bt-text-warning-strong: var(--bt-warning-strong);
+    --bt-text-warning-heavy: var(--bt-warning-heavy);
+    --bt-text-warning-solid: var(--bt-warning-solid);
+    --bt-text-warning-intense: var(--bt-warning-intense);
+
+    /* Text: error */
+    --bt-text-error-default: var(--bt-error-default);
+    --bt-text-error-light: var(--bt-error-light);
+    --bt-text-error-subtle: var(--bt-error-subtle);
+    --bt-text-error-muted: var(--bt-error-muted);
+    --bt-text-error-emphasis: var(--bt-error-emphasis);
+    --bt-text-error-strong: var(--bt-error-strong);
+    --bt-text-error-heavy: var(--bt-error-heavy);
+    --bt-text-error-solid: var(--bt-error-solid);
+    --bt-text-error-intense: var(--bt-error-intense);
+
 }
