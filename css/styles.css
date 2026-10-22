@@ -69,7 +69,7 @@ h3 {
     background-color: var(--bt-surface-primary-light);
     border-right: 1px solid var(--bt-border-primary-muted);
     padding: var(--bt-space-2xl);
-    width: 240px;
+    width: var(--sidebar-width);
     flex-shrink: 0;
     position: sticky;
     top: 0;
@@ -135,15 +135,15 @@ h3 {
 }
 
 .sidebar svg {
-    width: 16px;
-    height: 16px;
+    width: var(--icon-size);
+    height: var(--icon-size);
     flex-shrink: 0;
 }
 
 /* Sidebar: kapalı durum */
 
 .sidebar.is-collapsed {
-    width: 56px;
+    width: var(--sidebar-width-collapsed);
     padding: var(--bt-space-2xl) var(--bt-space-md);
 }
 
@@ -183,7 +183,7 @@ h3 {
 .toolbar input,
 .toolbar select {
     font: inherit;
-    height: 32px;
+    height: var(--control-height);
     padding: 0 var(--bt-space-lg);
     border: 1px solid var(--bt-border-primary-default);
     border-radius: var(--bt-radius-md);
@@ -211,7 +211,7 @@ h3 {
 .toolbar button {
     cursor: pointer;
     font: var(--bt-label-sm-medium);
-    height: 32px;
+    height: var(--control-height);
     padding: 0 var(--bt-space-lg);
     background: var(--bt-surface-primary-default);
     border: 1px solid var(--bt-border-primary-default);
@@ -320,12 +320,19 @@ main {
 /* Durum Badge Css */
 
 .badge {
+    --badge-bg: var(--bt-surface-primary-subtle);
+    --badge-fg: var(--bt-text-primary-strong);
+    --badge-border: var(--bt-border-primary-muted);
+
     display: inline-flex;
-    padding: var(--bt-space-2xs) var(--bt-space-md);
-    border: 1px solid;
-    border-radius: var(--bt-radius-full);
-    font: var(--bt-label-xs-medium);
     align-items: center;
+    padding: var(--bt-space-2xs) var(--bt-space-md);
+    border: 1px solid var(--badge-border);
+    border-radius: var(--bt-radius-full);
+    background: var(--badge-bg);
+    color: var(--badge-fg);
+    font: var(--bt-label-xs-medium);
+    
 }
 
 .badge::before {
@@ -339,21 +346,21 @@ main {
 }
 
 .badge--healthy {
-    background: var(--bt-surface-success-light);
-    color: var(--bt-text-success-default);
-    border-color: var(--bt-border-success-muted);
+    --badge-bg: var(--bt-surface-success-light);
+    --badge-fg: var(--bt-text-success-default);
+    --badge-border: var(--bt-border-success-muted);
 }
 
 .badge--warning {
-    background: var(--bt-surface-warning-light);
-    color: var(--bt-text-warning-default);
-    border-color: var(--bt-border-warning-muted);
+    --badge-bg: var(--bt-surface-warning-light);
+    --badge-fg: var(--bt-text-warning-default);
+    --badge-border: var(--bt-border-warning-muted);
 }
 
 .badge--critical {
-    background: var(--bt-surface-error-light);
-    color: var(--bt-text-error-default);
-    border-color: var(--bt-border-error-muted);
+    --badge-bg: var(--bt-surface-error-light);
+    --badge-fg: var(--bt-text-error-default);
+    --badge-border: var(--bt-border-error-muted);
 }
 
 

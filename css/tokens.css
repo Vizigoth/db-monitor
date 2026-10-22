@@ -340,19 +340,19 @@
 
 :root {
     --bt-base-sizing-none: 0px;
-    --bt-base-sizing-2xs:  2px;
-    --bt-base-sizing-xs:   4px;
-    --bt-base-sizing-sm:   6px;
-    --bt-base-sizing-md:   8px;
-    --bt-base-sizing-lg:   10px;
-    --bt-base-sizing-xl:   12px;
-    --bt-base-sizing-2xl:  14px;
-    --bt-base-sizing-3xl:  16px;
-    --bt-base-sizing-4xl:  18px;
-    --bt-base-sizing-5xl:  20px;
-    --bt-base-sizing-6xl:  24px;
-    --bt-base-sizing-7xl:  28px;
-    --bt-base-sizing-8xl:  32px;
+    --bt-base-sizing-2xs: 2px;
+    --bt-base-sizing-xs: 4px;
+    --bt-base-sizing-sm: 6px;
+    --bt-base-sizing-md: 8px;
+    --bt-base-sizing-lg: 10px;
+    --bt-base-sizing-xl: 12px;
+    --bt-base-sizing-2xl: 14px;
+    --bt-base-sizing-3xl: 16px;
+    --bt-base-sizing-4xl: 18px;
+    --bt-base-sizing-5xl: 20px;
+    --bt-base-sizing-6xl: 24px;
+    --bt-base-sizing-7xl: 28px;
+    --bt-base-sizing-8xl: 32px;
     --bt-base-sizing-full: 9999px;
 }
 
@@ -363,27 +363,46 @@
 
 :root {
     /* Space */
-    --bt-space-none: var(--bt-base-sizing-none);  /* 0  */
-    --bt-space-2xs:  var(--bt-base-sizing-2xs);   /* 2  */
-    --bt-space-xs:   var(--bt-base-sizing-xs);    /* 4  */
-    --bt-space-sm:   var(--bt-base-sizing-sm);    /* 6  */
-    --bt-space-md:   var(--bt-base-sizing-md);    /* 8  */
-    --bt-space-lg:   var(--bt-base-sizing-lg);    /* 10 */
-    --bt-space-xl:   var(--bt-base-sizing-xl);    /* 12 */
-    --bt-space-2xl:  var(--bt-base-sizing-3xl);   /* 16 */
-    --bt-space-3xl:  var(--bt-base-sizing-5xl);   /* 20 */
-    --bt-space-4xl:  var(--bt-base-sizing-6xl);   /* 24 */
-    --bt-space-5xl:  var(--bt-base-sizing-7xl);   /* 28 */
-    --bt-space-6xl:  var(--bt-base-sizing-8xl);   /* 32 */
+    --bt-space-none: var(--bt-base-sizing-none);
+    /* 0  */
+    --bt-space-2xs: var(--bt-base-sizing-2xs);
+    /* 2  */
+    --bt-space-xs: var(--bt-base-sizing-xs);
+    /* 4  */
+    --bt-space-sm: var(--bt-base-sizing-sm);
+    /* 6  */
+    --bt-space-md: var(--bt-base-sizing-md);
+    /* 8  */
+    --bt-space-lg: var(--bt-base-sizing-lg);
+    /* 10 */
+    --bt-space-xl: var(--bt-base-sizing-xl);
+    /* 12 */
+    --bt-space-2xl: var(--bt-base-sizing-3xl);
+    /* 16 */
+    --bt-space-3xl: var(--bt-base-sizing-5xl);
+    /* 20 */
+    --bt-space-4xl: var(--bt-base-sizing-6xl);
+    /* 24 */
+    --bt-space-5xl: var(--bt-base-sizing-7xl);
+    /* 28 */
+    --bt-space-6xl: var(--bt-base-sizing-8xl);
+    /* 32 */
 
     /* Radius */
-    --bt-radius-none: var(--bt-base-sizing-none); /* 0  */
-    --bt-radius-xs:   var(--bt-base-sizing-2xs);  /* 2  */
-    --bt-radius-sm:   var(--bt-base-sizing-xs);   /* 4  */
-    --bt-radius-md:   var(--bt-base-sizing-sm);   /* 6  */
-    --bt-radius-lg:   var(--bt-base-sizing-md);   /* 8  */
-    --bt-radius-xl:   var(--bt-base-sizing-lg);   /* 10 */
-    --bt-radius-full: var(--bt-base-sizing-full); /* 9999 */
+    --bt-radius-none: var(--bt-base-sizing-none);
+    /* 0  */
+    --bt-radius-xs: var(--bt-base-sizing-2xs);
+    /* 2  */
+    --bt-radius-sm: var(--bt-base-sizing-xs);
+    /* 4  */
+    --bt-radius-md: var(--bt-base-sizing-sm);
+    /* 6  */
+    --bt-radius-lg: var(--bt-base-sizing-md);
+    /* 8  */
+    --bt-radius-xl: var(--bt-base-sizing-lg);
+    /* 10 */
+    --bt-radius-full: var(--bt-base-sizing-full);
+    /* 9999 */
 }
 
 /* =========================================
@@ -403,8 +422,25 @@
     --bt-label-sm-medium: 500 14px/16px var(--font);
 
     /* Title */
-    --bt-title-sm-medium:  500 14px/16px var(--font);
-    --bt-title-md-medium:  500 16px/24px var(--font);
-    --bt-title-lg-medium:  500 18px/24px var(--font);
+    --bt-title-sm-medium: 500 14px/16px var(--font);
+    --bt-title-md-medium: 500 16px/24px var(--font);
+    --bt-title-lg-medium: 500 18px/24px var(--font);
     --bt-title-2xl-medium: 500 24px/32px var(--font);
+}
+
+/* =========================================
+   Design Tokens
+   Component
+   ========================================= */
+
+:root {
+
+    /* ---------- Sidebar ---------- */
+    --sidebar-width: 240px;
+    --sidebar-width-collapsed: 56px;
+    --control-height: 32px;
+    --icon-size: 16px;
+
+    
+
 }
