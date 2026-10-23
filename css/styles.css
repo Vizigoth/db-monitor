@@ -208,23 +208,60 @@ h3 {
     gap: var(--bt-space-md);
 }
 
-.toolbar button {
-    cursor: pointer;
-    font: var(--bt-label-sm-medium);
+/* Button Css */
+
+/* Button Default */
+
+.button {
+    --button-bg: var(--bt-surface-primary-default);
+    --button-fg: var(--bt-text-primary-solid);
+    --button-border: var(--bt-border-primary-default);
+    --button-bg-hover: var(--bt-surface-primary-light);
+    --button-border-hover: var(--bt-border-primary-emphasis);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bt-space-sm);
     height: var(--control-height);
     padding: 0 var(--bt-space-lg);
-    background: var(--bt-surface-primary-default);
-    border: 1px solid var(--bt-border-primary-default);
+    border: 1px solid var(--button-border);
     border-radius: var(--bt-radius-md);
-    color: var(--bt-text-primary-solid);
+    background: var(--button-bg);
+    color: var(--button-fg);
+    font: var(--bt-label-sm-medium);
+    cursor: pointer;
     transition: background-color 150ms ease, border-color 150ms ease;
 }
 
-.toolbar button:hover {
-    background: var(--bt-surface-primary-light);
-    border-color: var(--bt-border-primary-emphasis);
+.button:hover {
+    background: var(--button-bg-hover);
+    border-color: var(--button-border-hover);
 }
 
+.button:disabled {
+    --button-bg: var(--bt-surface-primary-subtle);
+    --button-fg: var(--bt-text-primary-muted);
+    --button-border: var(--bt-border-primary-muted);
+    --button-bg-hover: var(--bt-surface-primary-subtle);
+    --button-border-hover: var(--bt-border-primary-muted);
+    cursor: not-allowed;
+}
+
+.button--primary {
+    --button-bg: var(--bt-surface-brand-solid);
+    --button-fg: var(--bt-text-primary-inverted);
+    --button-border: var(--bt-border-brand-solid);
+    --button-bg-hover: var(--bt-surface-brand-default);
+    --button-border-hover: var(--bt-border-brand-default);
+}
+
+.button--ghost {
+    --button-bg: transparent;
+    --button-border: transparent;
+    --button-bg-hover: var(--bt-surface-primary-subtle);
+    --button-border-hover: transparent;
+}
 
 
 
@@ -332,7 +369,7 @@ main {
     background: var(--badge-bg);
     color: var(--badge-fg);
     font: var(--bt-label-xs-medium);
-    
+
 }
 
 .badge::before {
