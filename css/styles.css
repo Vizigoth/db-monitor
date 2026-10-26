@@ -263,7 +263,46 @@ h3 {
     --button-border-hover: transparent;
 }
 
+/* Input Css */
 
+.input {
+    --input-bg: var(--bt-surface-primary-default);
+    --input-fg: var(--bt-text-primary-solid);
+    --input-border: var();
+    --input-border-hover: var();
+    --input-border-focus: var();
+
+    height: var(--control-height);
+    padding: 0 var(--bt-space-lg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--bt-radius-md);
+    background: var(--input-bg);
+    color: var(--input-fg);
+    font: var(--bt-text-sm-regular);
+    transition: border-color 150ms ease;
+}
+
+.input:hover {
+    border-color: var(--input-border-hover);
+}
+
+.input:focus-visible {
+    border-color: var(--input-border-focus);
+}
+
+.input--error {
+    --input-border: var(--bt-border-error-default);
+    --input-border-hover: var(--bt-border-error-default);
+    --input-border-focus var(--bt-border-error-default);
+}
+
+.input:disabled {
+    --input-bg: var(--bt-surface-primary-subtle);
+    --input-fg: var(--bt-text-primary-muted);
+    --input-border: var(--bt-border-primary-muted);
+    --input-border-hover: var(--bt-border-primary-muted);
+    cursor: not-allowed;
+}
 
 /* Main Content Css */
 
