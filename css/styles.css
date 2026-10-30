@@ -180,21 +180,6 @@ h3 {
     color: var(--bt-text-primary-strong);
 }
 
-.toolbar input,
-.toolbar select {
-    font: inherit;
-    height: var(--control-height);
-    padding: 0 var(--bt-space-lg);
-    border: 1px solid var(--bt-border-primary-default);
-    border-radius: var(--bt-radius-md);
-    background: var(--bt-surface-primary-default);
-}
-
-.toolbar input:focus-visible,
-.toolbar select:focus-visible {
-    border-color: var(--bt-border-brand-default);
-}
-
 .toolbar search {
     display: flex;
     align-items: center;
@@ -268,9 +253,10 @@ h3 {
 .input {
     --input-bg: var(--bt-surface-primary-default);
     --input-fg: var(--bt-text-primary-solid);
-    --input-border: var();
-    --input-border-hover: var();
-    --input-border-focus: var();
+    --input-border: var(--bt-border-primary-default);
+    --input-border-hover: var(--bt-border-primary-emphasis);
+    --input-border-focus: var(--bt-border-brand-default);
+
 
     height: var(--control-height);
     padding: 0 var(--bt-space-lg);
@@ -280,6 +266,10 @@ h3 {
     color: var(--input-fg);
     font: var(--bt-text-sm-regular);
     transition: border-color 150ms ease;
+}
+
+.input::placeholder {
+    color: var(--bt-text-primary-muted);
 }
 
 .input:hover {
@@ -293,7 +283,7 @@ h3 {
 .input--error {
     --input-border: var(--bt-border-error-default);
     --input-border-hover: var(--bt-border-error-default);
-    --input-border-focus var(--bt-border-error-default);
+    --input-border-focus: var(--bt-border-error-default);
 }
 
 .input:disabled {
