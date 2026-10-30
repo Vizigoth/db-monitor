@@ -2,7 +2,8 @@
 @import url("vendor.css") layer(vendor);
 
 
-/* Layer Base */
+
+/* ======== Layer Base ======== */
 
 @layer base {
 
@@ -46,7 +47,7 @@
 
 }
 
-/* Layer Components */
+/* ======== Layer Components ======== */
 
 @layer components {
 
@@ -352,15 +353,15 @@
         --card-border: var(--bt-border-error-muted);
     }
 
-    .card dl {
+    :where(.card) dl {
         margin-bottom: 0;
     }
 
-    .card dd {
+    :where(.card) dd {
         margin-left: 0;
     }
 
-    .card dt {
+    :where(.card) dt {
         color: var(--bt-text-primary-emphasis);
         font: var(--bt-text-xs-regular);
     }
@@ -486,8 +487,8 @@
 
 }
 
+/* ======== Layer Utilities ======== */
 
-/* Layer Utilities */
 
 @layer utilities {
 
@@ -510,7 +511,7 @@
 
 }
 
-
+/* ======== Layer Components ======== */
 
 @layer components {
 
