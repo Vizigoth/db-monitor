@@ -1,0 +1,6 @@
+body .toolbar__actions button.button {
+    background: #e0e0e0;
+    border-color: #999999;
+    border-radius: 0;
+    color: #333333;
+}
