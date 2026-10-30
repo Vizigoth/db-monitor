@@ -334,7 +334,6 @@
     }
 
 
-
     /* DB Card Css */
 
     .card {
@@ -500,7 +499,17 @@
         text-align: center;
     }
 
+    .text-error {
+        color: var(--bt-text-error-default);
+    }
+
+    .mb-0 {
+        margin-bottom: 0;
+    }
+
+
 }
+
 
 
 @layer components {
@@ -572,5 +581,6 @@
             grid-template-columns: 1fr;
         }
     }
+
 
 }
