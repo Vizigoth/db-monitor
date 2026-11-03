@@ -1,0 +1,15 @@
+    .num {
+        text-align: right;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .text-error {
+        color: var(--bt-text-error-default);
+    }
+
+    .mb-0 {
+        margin-bottom: 0;
+    }

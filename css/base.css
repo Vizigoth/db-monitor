@@ -1,0 +1,68 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    :focus-visible {
+        outline: 1px solid var(--bt-border-brand-default);
+        outline-offset: 0;
+        box-shadow: 0 0 0 4px rgba(13, 78, 151, 0.20);
+
+    }
+
+    body {
+        font: var(--bt-text-sm-regular);
+        color: var(--bt-text-primary-solid);
+        margin: 0;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    /* Utilities */
+
+
+
+    /* TypeScale Css */
+
+    h1 {
+        font: var(--bt-title-2xl-medium);
+    }
+
+    h2 {
+        font: var(--bt-title-lg-medium);
+        padding-bottom: var(--bt-space-md);
+    }
+
+    h3 {
+        font: var(--bt-title-md-medium);
+    }
+
+    /* Table Css */
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid var(--bt-border-primary-muted);
+    }
+
+    caption {
+        text-align: left;
+        font: var(--bt-title-sm-medium);
+        padding-bottom: var(--bt-space-md);
+    }
+
+    th,
+    td {
+        padding: var(--bt-space-xl) var(--bt-space-md);
+        border-bottom: 1px solid var(--bt-border-primary-muted);
+        text-align: left;
+    }
+
+    thead th {
+        background-color: var(--bt-surface-primary-default);
+        color: var(--bt-text-primary-strong);
+        font: var(--bt-text-xs-regular);
+    }
+
+    tbody th {
+        font-weight: 400;
+    }
