@@ -1,6 +1,22 @@
-body .toolbar__actions button.button {
-    background: #e0e0e0;
-    border-color: #999999;
-    border-radius: 0;
-    color: #333333;
+:root{
+
+    --kendo-color-primary: #7e22ce;
+    --kendo-color-on-primary: #ffffff;
+    --kendo-border-radius-md: 0px;
 }
+
+ .k-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: var(--kendo-border-radius-md);
+    background: var(--kendo-color-primary);
+    color: var(--kendo-color-on-primary);
+    font-size: 12px;
+ }
+
+ .k-link {
+    color: var(--kendo-color-primary);
+    font-size: 14px;
+ }
+
