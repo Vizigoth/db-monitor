@@ -441,8 +441,8 @@
 :root {
 
     /* ---------- Sidebar ---------- */
-    --sidebar-width: 240px;
-    --sidebar-width-collapsed: 56px;
+    --sidebar-width: 280px;
+    --sidebar-width-collapsed: 48px;
     --control-height: 32px;
     --icon-size: 16px;
 }
