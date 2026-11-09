@@ -383,9 +383,13 @@
         border-radius: var(--card-radius);
         background: var(--card-bg);
     }
-
-    .card--critical {
+    
+    .card:has(.badge--critical) {
         --card-border: var(--bt-border-error-muted);
+    }
+
+    .card:has(.badge--warning) {
+        --card-border: var(--bt-border-warning-muted);
     }
 
     :where(.card) dl {
