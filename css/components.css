@@ -22,6 +22,7 @@
     /* Sidebar Css */
 
     .sidebar {
+        z-index: 1;
         display: flex;
         flex-direction: column;
         background-color: var(--bt-base-default);
@@ -32,7 +33,6 @@
         top: 0;
         height: 100vh;
         align-self: flex-start;
-        overflow: hidden;
         transition: width 200ms ease;
     }
 
@@ -73,6 +73,9 @@
     }
 
     .sidebar nav {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
         padding: var(--bt-space-2xl) var(--bt-space-md);
     }
 
@@ -187,6 +190,23 @@
 
     .sidebar.is-collapsed .sidebar__link {
         justify-content: center;
+    }
+
+    .sidebar.is-collapsed .sidebar__toggle {
+        position: absolute;
+        top: 42px;
+        inset-inline-end: 0;
+        translate: 50% 0;
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--bt-border-primary-default);
+        border-radius: var(--bt-radius-sm);
+        background-color: var(--bt-base-default);
+        color: var(--bt-text-primary-strong);
+    }
+
+    .sidebar.is-collapsed .sidebar__toggle:hover {
+        background-color: var(--bt-base-subtle);
     }
 
     /* Toolbar Css */
