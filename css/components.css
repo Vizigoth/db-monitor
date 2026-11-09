@@ -185,7 +185,7 @@
         transform: rotate(180deg);
     }
 
-    .sidebar.is-collapsed .sidebar__list {
+    .sidebar.is-collapsed .sidebar__link {
         justify-content: center;
     }
 
