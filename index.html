@@ -96,24 +96,27 @@
 
             <div class="toolbar">
                 <search>
-                    <div class="field">
-                        <label for="db-search">Veritabanı ara</label>
-                        <input type="search" id="db-search" class="input" placeholder="Ara">
-                    </div>
 
-                    <div class="field">
+                    <form class="toolbar__filters">
+                        <div class="field">
+                            <label for="db-search">Veritabanı ara</label>
+                            <input type="search" id="db-search" class="input" placeholder="Ara">
+                        </div>
 
-                        <label for="status-filter">Tüm Durumlar</label>
-                        <select id="status-filter" class="input">
-                            <option value="all">Tümü</option>
-                            <option value="healthy">Sağlıklı</option>
-                            <option value="warning">Uyarı</option>
-                            <option value="critical">Kritik</option>
+                        <div class="field">
 
-                        </select>
-                    </div>
+                            <label for="status-filter">Tüm Durumlar</label>
+                            <select id="status-filter" class="input">
+                                <option value="all">Tümü</option>
+                                <option value="healthy">Sağlıklı</option>
+                                <option value="warning">Uyarı</option>
+                                <option value="critical">Kritik</option>
 
-
+                            </select>
+                        </div>
+                        <button type="reset" class="button toolbar__clear">Temizle</button>
+                    </form>
+                    
                 </search>
 
                 <div class="toolbar__actions">
