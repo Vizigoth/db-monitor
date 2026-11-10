@@ -168,31 +168,35 @@
         flex-shrink: 0;
     }
 
-    /* Sidebar: kapalı durum */
-
-    .sidebar.is-collapsed {
-        width: var(--sidebar-width-collapsed);
-    }
-
-    .sidebar.is-collapsed .sidebar__title,
-    .sidebar.is-collapsed .sidebar__label {
+    .sidebar__state {
         display: none;
     }
 
-    .sidebar.is-collapsed .sidebar__top {
+    /* Sidebar: kapalı durum */
+
+    .sidebar:has(.sidebar__state:checked) {
+        width: var(--sidebar-width-collapsed);
+    }
+
+    .sidebar:has(.sidebar__state:checked) .sidebar__title,
+    .sidebar:has(.sidebar__state:checked) .sidebar__label {
+        display: none;
+    }
+
+    .sidebar:has(.sidebar__state:checked) .sidebar__top {
         justify-content: center;
         padding-inline: 0;
     }
 
-    .sidebar.is-collapsed .sidebar__toggle svg {
+    .sidebar:has(.sidebar__state:checked) .sidebar__toggle svg {
         transform: rotate(180deg);
     }
 
-    .sidebar.is-collapsed .sidebar__link {
+    .sidebar:has(.sidebar__state:checked) .sidebar__link {
         justify-content: center;
     }
 
-    .sidebar.is-collapsed .sidebar__toggle {
+    .sidebar:has(.sidebar__state:checked) .sidebar__toggle {
         position: absolute;
         top: 42px;
         inset-inline-end: 0;
@@ -205,7 +209,7 @@
         color: var(--bt-text-primary-strong);
     }
 
-    .sidebar.is-collapsed .sidebar__toggle:hover {
+    .sidebar:has(.sidebar__state:checked) .sidebar__toggle:hover {
         background-color: var(--bt-base-subtle);
     }
 
