@@ -447,7 +447,37 @@
 
     }
 
+    /* Empty state */
 
+    .empty-state {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--bt-space-xs);
+        padding: var(--bt-space-4xl);
+        border: 1px dashed var(--bt-border-primary-default);
+        border-radius: var(--bt-radius-lg);
+        text-align: center;
+        grid-column: 1 / -1;
+        min-height: 240px;
+        justify-content: center;
+    }
+
+    .empty-state__title {
+        margin: 0;
+        font: var(--bt-label-sm-medium);
+        color: var(--bt-text-primary-solid);
+    }
+
+    .empty-state__description {
+        margin: 0;
+        font: var(--bt-text-xs-regular);
+        color: var(--bt-text-primary-muted);
+    }
+
+    .card-grid:not(:has(.card)) .empty-state {
+        display: flex;
+    }
 
     /* Durum Badge Css */
 

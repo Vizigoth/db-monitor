@@ -9,7 +9,7 @@
     display: inline-flex;
     align-items: center;
     padding: 2px 8px;
-    border-radius: var(--kendo-border-radius-md);
+    border-radius: var(--kendo-border-radius-md);k-link
     background: var(--kendo-color-primary);
     color: var(--kendo-color-on-primary);
     font-size: 12px;
