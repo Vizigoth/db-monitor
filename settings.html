@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Monitor</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">İçeriğe geç</a>
+
+    <aside class="sidebar">
+        <div class="sidebar__top">
+            <div class="sidebar__brand">
+                <span class="sidebar__logo"></span>
+                <p class="sidebar__title">Database Monitor</p>
+            </div>
+
+            <input type="checkbox" id="sidebar-collapse" class="sidebar__state">
+            <label for="sidebar-collapse" class="sidebar__toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-panel-left-close preview-icon">
+                    <rect width="18" height="18" x="3" y="3" rx="2" />
+                    <path d="M9 3v18" />
+                    <path d="m16 15-3-3 3-3" />
+                </svg>
+            </label>
+
+        </div>
+
+
+        <nav>
+            <ul class="sidebar__list">
+                <li>
+                    <a href="index.html" class="sidebar__link">
+                        <span class="sidebar__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-trending-up-down preview-icon">
+                                <path d="M14.828 14.828 21 21" />
+                                <path d="M21 16v5h-5" />
+                                <path d="m21 3-9 9-4-4-6 6" />
+                                <path d="M21 8V3h-5" />
+                            </svg>
+                        </span>
+                        <span class="sidebar__label">Veritabanı İzleme</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html" class="sidebar__link">
+                        <span class="sidebar__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-form preview-icon">
+                                <path d="M4 14h6" />
+                                <path d="M4 2h10" />
+                                <rect x="4" y="18" width="16" height="4" rx="1" />
+                                <rect x="4" y="6" width="16" height="4" rx="1" />
+                            </svg>
+                        </span>
+                        <span class="sidebar__label">Raporlar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html" class="sidebar__link" aria-current="page">
+                        <span class="sidebar__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-settings-2 preview-icon">
+                                <path d="M14 17H5" />
+                                <path d="M19 7h-9" />
+                                <circle cx="17" cy="17" r="3" />
+                                <circle cx="7" cy="7" r="3" />
+                            </svg>
+                        </span>
+                        <span class="sidebar__label">Ayarlar</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </aside>
+
+    <main id="main-content">
+        <div class="page-top">
+            <header class="page-header">
+                <h1>Ayarlar</h1>
+            </header>
+        </div>
+
+        <section>
+
+            <section class="card panel settings-panel">
+                <h2 class="panel__title">Uyarı Eşikleri</h2>
+
+                <form class="form">
+                    <div class="form-field">
+                        <label for="cpu-threshold" class="form-field__label">CPU Kullanım Eşiği (%)</label>
+                        <input type="number" id="cpu-threshold" class="input" min="1" max="100" required>
+                        <p class="form-field__hint">1-100 arası bir değer girin</p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="alert-email" class="form-field__label">Bildirim E-posta Adresi</label>
+                        <input type="email" id="alert-email" class="input" placeholder="example@bentas.com" required>
+                        <p class="form-field__hint">Uyarılar bu e-posta adresine gönderilecektir</p>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button button--primary">Kaydet</button>
+                    </div>
+                </form>
+            </section>
+
+        </section>
+
+
+
+    </main>
+
+</body>
+
+</html>

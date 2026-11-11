@@ -24,11 +24,11 @@
     /* TypeScale Css */
 
     h1 {
-        font: var(--bt-title-2xl-medium);
+        font: var(--bt-title-lg-medium);
     }
 
     h2 {
-        font: var(--bt-title-lg-medium);
+        font: var(--bt-title-md-medium);
         padding-bottom: var(--bt-space-md);
     }
 
