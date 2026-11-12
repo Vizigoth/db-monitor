@@ -104,17 +104,19 @@
                 <form class="form">
                     <div class="form-field">
                         <label for="cpu-threshold" class="form-field__label">CPU Kullanım Eşiği (%)</label>
-                        <input type="number" id="cpu-threshold" class="input" min="1" max="100" required>
+                        <input type="number" id="cpu-threshold" class="input" placeholder="Örn. 1" min="1" max="100" required>
                         <p class="form-field__hint">1-100 arası bir değer girin</p>
+                        <p class="form-field__error">1-100 arası bir değer girin</p>
                     </div>
 
                     <div class="form-field">
                         <label for="alert-email" class="form-field__label">Bildirim E-posta Adresi</label>
                         <input type="email" id="alert-email" class="input" placeholder="example@bentas.com" required>
                         <p class="form-field__hint">Uyarılar bu e-posta adresine gönderilecektir</p>
+                        <p class="form-field__error">Geçerli bir e-posta adresi girin</p>
                     </div>
 
-                    <div class="form-actions">
+                    <div class="form__actions">
                         <button type="submit" class="button button--primary">Kaydet</button>
                     </div>
                 </form>
