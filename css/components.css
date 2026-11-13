@@ -440,15 +440,19 @@
         font: var(--bt-text-xs-regular);
     }
 
-    .card h3 a {
+    :where(.card h3 a) {
         color: inherit;
         text-decoration: none;
         transition: color 150ms ease;
     }
 
-    .card h3 a:hover {
+    :where(.card h3 a:hover) {
         color: var(--bt-text-brand-solid);
         text-decoration: underline;
+    }
+
+    .card__link--muted {
+        color: var(--bt-text-primary-muted);
     }
 
     .metrics {
